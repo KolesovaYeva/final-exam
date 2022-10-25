@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+//Basic Fonts 
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+
+}
+
+.header_wrapper{
+    display: block;
+    width:70%;
+    padding:10px;
+    margin: 0 auto;
+    .logo_link{
+        .group_logo{
+            transition:all 0.5s ease;
+            &:hover{
+                transform: scaleX(1.1);
+                transition:all 0.5s ease;
+            }
+        }
+    }
+}

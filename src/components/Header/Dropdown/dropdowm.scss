@@ -1,0 +1,30 @@
+
+
+.dropdownIcon{
+    padding:0;
+    .sub_menu_wrapper{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        top: 112%;
+        left: 100%;
+        transform: translateX(-50%);
+        width: -moz-max-content;
+        width: max-content;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.42857143;
+        color: #333;
+        text-align: left;
+    }
+}
+
+.menu_dropdown-enter-active, .menu_dropdown-leave-active{
+    transition: all .5s ease-out;
+}
+
+.menu_dropdown-enter, .menu_dropdown-leave-to{
+    opacity:0;
+
+}

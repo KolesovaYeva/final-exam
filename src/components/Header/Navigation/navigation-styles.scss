@@ -1,0 +1,40 @@
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.navigation_list{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    .navigation_item{
+        font-family: 'Roboto', sans-serif;
+        font-size:18px;
+        color: #000;
+        padding:10px;
+        position:relative;
+        text-align: center;
+        display: flex;
+        transition: all .5s ease-out;
+         &:hover{
+            transition: all .5s ease;
+            margin:3px;
+            border-bottom: 1px solid rgba(44, 64, 88, 0.3411764706);
+        }
+        .navigation_item_link{
+            color:inherit;
+            
+        }
+    }
+}
