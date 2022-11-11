@@ -7,23 +7,23 @@ Vue.use(Vuex)
 let store = new Vuex.Store({
   state: {
     products: [],
-    // band: []
+    live: []
   },
   getters: {
     PRODUCTS(state){
       return state.products
     },
-    // MATES(state){
-    //   return state.band
-    // }
+    LIVE(state){
+      return state.live
+    }
   },
   mutations: {
     SET_PRODUCTS_TO_STATE: (state, products)=> {
       state.products = products;
     },
-    // SET_MATE_TO_STATE: (state, band)=>{
-    //   state.band = band;
-    // }
+    SET_LIVE_TO_STATE: (state, live)=>{
+      state.live = live;
+    }
   },
   actions: {
     GET_PRODUCTS_FROM_API({commit}){
@@ -39,19 +39,19 @@ let store = new Vuex.Store({
           return error;
         })
     },
-    // GET_MATE_FROM_API({commit}){
-    //   return axios('http://localhost:3000/band',{
-    //     method: "GET"
-    //   })
-    //     .then((band) => {
-    //       commit('SET_MATE_TO_STATE', band.data)
-    //       return band;
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //       return error;
-    //     })
-    // }
+    GET_LIVE_FROM_API({commit}){
+      return axios('http://localhost:3000/live',{
+        method: "GET"
+      })
+        .then((live) => {
+          commit('SET_LIVE_TO_STATE', live.data)
+          return live;
+        })
+        .catch((error) => {
+          console.log(error);
+          return error;
+        })
+    }
   },
   modules: {
   }

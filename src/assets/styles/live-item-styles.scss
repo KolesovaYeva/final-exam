@@ -1,0 +1,25 @@
+.live_item{
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+    font-family: "Roboto", sans-serif;
+    color: #000;
+    padding: 18px 24px 14px;
+    border-top: 3px solid #e5e5e5;
+    .bolder_text{
+        font-size: 3.3em;
+        line-height: 0.5;
+    }
+    .regular_text{
+        font-size: 1.8em;
+        font-weight: 400;
+        color: #333;
+    }
+    .button_wrapper{
+        padding: 10px;
+        background-color: #e60000;
+        color: #fff;
+        width: 150px;
+        font-size: 1.3em;
+    }
+}

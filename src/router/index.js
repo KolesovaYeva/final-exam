@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import bandWrapper from '@/components/Band/band.vue';
-// import liveWrapper from '@/components/Live/Live.vue';
+import liveWrapper from '@/components/Live/liveWrapper.vue';
 import linkWrapper from '@/components/Links/links.vue';
 // import musicWrapper from '@/components/Music/Music.vue';
 import queenWrapper from '@/components/Band/queen.vue';
@@ -61,13 +61,13 @@ let router = new VueRouter({
             path: '/band/johnDeacon',
             name: 'johnDeacon',
             component: johnDeaconWrapper
+        },
+        {
+            path:'/live',
+            name: 'live',
+            component: liveWrapper,
+            props: true
         }
-        // {
-        //     path:'/live',
-        //     name: 'live',
-        //     component: linkWrapper,
-        //     props: true
-        // }
     ]
 })
 

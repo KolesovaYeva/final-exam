@@ -1,0 +1,27 @@
+.live_wrapper{
+    position:relative;
+    margin-bottom:50px;
+    .hero_image{
+        width:100%;
+        position:relative;
+        margin-bottom:50px;
+    }
+    .page_title{
+        margin-bottom:20px;
+    }
+    .image_text{
+        z-index:1;
+        position: absolute;
+        right:0;
+        top:0;
+        display: block;
+        top: 50px;
+        color: #fff;
+        right: 100px;
+        font-family: 'Roboto', sans-serif;
+        text-align: right;
+        font-size: 4.4em;
+        line-height: 60px;
+        text-shadow: 5px 5px #000;
+    }
+}
