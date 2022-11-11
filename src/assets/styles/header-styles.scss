@@ -19,13 +19,14 @@ body{
 .header_wrapper{
     display: block;
     width:70%;
-    padding:10px;
+    padding:20px;
     margin: 0 auto;
     .logo_link{
         .group_logo{
+            max-width:300px;
             transition:all 0.5s ease;
             &:hover{
-                transform: scaleX(1.1);
+                transform: translateY(5px);
                 transition:all 0.5s ease;
             }
         }

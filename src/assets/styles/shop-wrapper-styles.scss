@@ -1,0 +1,10 @@
+.catalog_wrapper{
+    position:relative;
+    overflow-x: hidden;
+}
+.shop_list{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}

@@ -1,32 +1,26 @@
 <template>
   <div id="app">
-    <!-- <nav>
-      <router-link to="/"></router-link> 
-      <router-link to="/about"></router-link>
-    </nav> -->
-    <router-view/>
+    <div class="v-main-wrapper">
+      <headerWrapper/>
+      <router-view/>
+      <footerWrapper/>
+    </div>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-nav {
-  padding: 30px;
+<script>
+  import headerWrapper from '@/components/Header/header.vue';
+  import footerWrapper from '@/components/Footer/footer.vue';
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  export default {
+    name: 'HomeView',
+    components: {
+      headerWrapper,
+      footerWrapper,
     }
   }
-}
+</script>
+
+<style lang="scss" src="@/assets/styles/app-styles.scss">
 </style>

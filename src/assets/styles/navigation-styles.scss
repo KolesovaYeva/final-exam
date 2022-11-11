@@ -26,15 +26,15 @@ body{
         position:relative;
         text-align: center;
         display: flex;
-        transition: all .5s ease-out;
+        transition: all 1.5s ease;
+        z-index: 3;
          &:hover{
-            transition: all .5s ease;
-            margin:3px;
+            transition: all .8s ease;
+            transform: translateY(13px);
             border-bottom: 1px solid rgba(44, 64, 88, 0.3411764706);
         }
         .navigation_item_link{
             color:inherit;
-            
         }
     }
 }
