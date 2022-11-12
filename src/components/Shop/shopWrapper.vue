@@ -2,13 +2,12 @@
     <div class="catalog_wrapper">
         <sliderWrapper
             :carousel_data="sliderItems"
-            :interval="2000"
         />
         <div class="shop_list container">
             <catalogItem
                 v-for="product in PRODUCTS"
                 :key="product.name"
-                v-bind:product_data="product"
+                :product_data="product"
             />
         </div>
     </div>

@@ -1,8 +1,8 @@
 <template>
     <div class="wrapper">
-        <div class="slider_wrapper">
-            <sliderItem
-                v-for="item in carousel_data"
+        <div class="slider_music_wrapper">
+            <sliderMusicItem
+                v-for="item in carousel_music_data"
                 :key="item.id"
                 :item_data="item"
             />
@@ -12,15 +12,15 @@
 
 <script>
     import '/public/slider.js';
-    import sliderItem from '@/components/Shop/Slider/sliderItem.vue';
+    import sliderMusicItem from '@/components/Music/Slider/sliderMusicItem.vue';
 
     export default{
-        name:'sliderWrapper',
+        name:'sliderMusicWrapper',
         components:{
-            sliderItem,
+            sliderMusicItem,
         },
         props:{
-            carousel_data:{
+            carousel_music_data:{
                 type: Array,
                 default: () => []
             },
@@ -39,5 +39,5 @@
     } 
 </script>
 
-<style lang="scss" src="@/assets/styles/slider-wrapper-styles.scss">
+<style lang="scss" src="@/assets/styles/slider-music-item.scss">
 </style>
