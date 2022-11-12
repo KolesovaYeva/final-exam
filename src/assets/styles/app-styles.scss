@@ -26,4 +26,13 @@
       align-items:center;
       flex-wrap: wrap;
     }
+
+    img{
+      object-fit: cover;
+    }
   
+@media screen and (max-width:1025px){
+  .container{
+    width:82%;      
+  }
+}

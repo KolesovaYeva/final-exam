@@ -23,4 +23,5 @@
 </script>
 
 <style lang="scss" src="@/assets/styles/app-styles.scss">
+
 </style>

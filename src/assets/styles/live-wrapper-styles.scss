@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .live_wrapper{
     position:relative;
     margin-bottom:50px;
@@ -23,5 +30,43 @@
         font-size: 4.4em;
         line-height: 60px;
         text-shadow: 5px 5px #000;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .live_wrapper{
+        .hero_image {
+            min-height: 10em;
+            -o-object-fit: cover;
+               object-fit: cover;
+        }
+        .image_text {
+            z-index: 1;
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: block;
+            top: 10px;
+            color: #fff;
+            right: 29px;
+            font-family: "Roboto", sans-serif;
+            text-align: right;
+            font-size: 3.4em;
+            line-height: 60px;
+            text-shadow: 5px 5px #000;
+        }
+        .hero_image {
+            min-height: 13em;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (max-width: 426px){
+    .live_wrapper .hero_image {
+        width: 100%;
+        position: relative;
+        margin-bottom: 15px;
     }
 }

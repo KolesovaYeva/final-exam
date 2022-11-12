@@ -6,7 +6,7 @@
         max-width:1200px;
     }
     .hero_image{
-        width:100;
+        width:100%;
         margin-bottom:20px;
         position:relative;
     }
@@ -64,4 +64,13 @@
             width:54%;
         }
     }
+}
+
+@media  screen and (max-width:1025px) {
+    .brian_may_wrapper .artist_name, .roger_taylor_wrapper .artist_name, .freddie_mercury_wrapper .artist_name, .john_deacon_wrapper .artist_name, .queen_wrapper .artist_name {
+        top: 25px;
+        right: 59px;
+        font-size: 2.4em;
+        line-height: 30px;
+    }    
 }

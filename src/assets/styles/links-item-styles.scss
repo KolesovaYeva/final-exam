@@ -1,10 +1,21 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .links_item_image{
     width:100%;
     max-width:500px;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
     transition: all .5s ease;
     &:hover{
         background-color: rgb(0, 0, 0);
         opacity: 0.5;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
         transition: all .5s ease;
     }
 }

@@ -132,3 +132,40 @@
         transform: translateY(-50%) translateX(100vw);
     }
 }
+
+@media screen and ( max-width: 1025px){
+    .catalog_item{
+        width:50%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .catalog_item{
+        width:90%;
+        margin-bottom: 70px;
+        .list_item_image{
+            max-height: 235px;
+        }
+        .list_item_name{
+            font-size: 18px;
+        }
+        .show_modal_button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: none;
+            border: none;
+            background: none;
+            cursor: pointer;
+            display: inline-block;
+            padding: 7px 7px;
+            background-image: linear-gradient(to right, #7891d9, #cdbaba);
+            border-radius: 8px;
+            color: #FFF;
+            font-size: 12px;
+            font-weight: 700;
+            box-shadow: 3px 3px rgb(0 0 0 / 40%);
+            transition: 0.4s ease-out;
+        }
+    }
+}
