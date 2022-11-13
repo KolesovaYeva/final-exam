@@ -1,20 +1,25 @@
 <template>
     <div class="music_wrapper">
-        <sliderMusicWrapper
-                :carousel_music_data="sliderItems"
-        />
-        <div class="music_list container">
+        <!-- <sliderMusicWrapper 
+            :carousel_music_data="sliderItems">
+            <sliderMusicItem
+                @click="showInfo = true">
+            </sliderMusicItem>
+        </sliderMusicWrapper>
+           <transition name="slide" appear>
             <musicItem
+                v-if="showInfo"
                 v-for="product in MUSIC"
                 :key="product.id"
                 v-bind:music_data="product"
             />
-        </div>
+           </transition> -->
     </div>
 </template>
 
 <script>
     import {mapActions, mapGetters} from 'vuex';
+    import sliderMusicItem  from '@/components/Music/Slider/sliderMusicItem.vue'
     import musicItem from '@/components/Music/musicItem.vue';
     import sliderMusicWrapper from '@/components/Music/Slider/sliderMusicWrapper.vue';
 
@@ -22,7 +27,8 @@
         name:'musicWrapper',
         components:{
             sliderMusicWrapper,
-            musicItem
+            musicItem,
+            sliderMusicItem
         },
         props:{
 
@@ -62,7 +68,8 @@
                     {id: "30", img: 'DEEP_CUTS_2.jpg'},
                     {id: "31", img: 'DEEP_CUTS_3.jpg'},
                     {id: "32", img: 'BOHEMIANRHAPSODY.jpg'}
-                ]
+                ],
+                showInfo: true
             }
         },
         computed:{

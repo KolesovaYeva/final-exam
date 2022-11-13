@@ -39,5 +39,5 @@
     } 
 </script>
 
-<style lang="scss" src="@/assets/styles/slider-music-item.scss">
+<style lang="scss" src="@/assets/styles/slider-music-wrapper.scss">
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="slider_music_wrapper">
+    <div class="slider_item_wrapper">
         <img class="slider_music_image" :src="require('@/assets/images/music/'+ item_data.img)" alt="">
     </div>
 </template>
@@ -18,7 +18,8 @@
             }
         },
         data(){
-            return{}
+            return{
+            }
         },
         computed:{}
     }
