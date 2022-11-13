@@ -1,92 +1,3 @@
-// Navigation styles
-ul{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-}
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
-body{
-    font-family: "Roboto", sans-serif;
-}
-
-.navigation_list{
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    .navigation_item{
-        font-family: 'Roboto', sans-serif;
-        font-size:18px;
-        color: #000;
-        padding:10px;
-        position:relative;
-        text-align: center;
-        display: flex;
-        transition: all 1.5s ease;
-        z-index: 3;
-         &:hover{
-            transition: all .8s ease;
-            transform: translateY(13px);
-            border-bottom: 1px solid rgba(44, 64, 88, 0.3411764706);
-        }
-        .navigation_item_link{
-            color:inherit;
-        }
-    }
-}
-
-//Media 
-
-@media screen and (min-width:426px){
-    .first_wrapper{
-     .hamburger--emphatic{
-         display:none;
-     }
-    }
- }
-
-
- @media screen and (max-width:425px){
-    .hamburger--emphatic{
-        .hamburger-box{
-            
-        z-index:3;
-        }
-        .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before{
-            background-color: #2a3a66;
-        }
-    }
-
-    .side-block {
-        position: fixed;
-        background-color: #22223c;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        max-width: 300px;
-        flex-direction: column;
-        z-index: 1;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        box-sizing: border-box;
-        transition: all .5s ease;
-        transform: translateX(100%);
-
-        &.open {
-            transform: translateX(0%);
-        }
-    }
- }
-
-//hamburger styles
-
 $hamburger-padding-x           : 15px !default;
 $hamburger-padding-y           : 15px !default;
 $hamburger-layer-width         : 40px !default;
@@ -154,7 +65,6 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
   height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
   display: inline-block;
   position: relative;
-  z-index:3
 }
 
 .hamburger-inner {

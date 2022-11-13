@@ -1,5 +1,6 @@
 <template>
-    <nav class="navigation_wrapper container">
+   <div class="navigation_wrapper">
+    <nav class="navigation_wrapper container" id="navBlock">
         <ul class="navigation_list">
             <router-link :to="{name:'band'}">
                 <li class="navigation_item">
@@ -28,9 +29,18 @@
             </router-link>
         </ul>
     </nav>
+    <div class="side-block" id="side_menu">
+    </div>
+    <button class="hamburger hamburger--emphatic" type="button" id="hamburger">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+        </button>    
+   </div>
 </template>
 
 <script>
+    import '/public/hamburger.js';
     export default {
     name: 'navigationWrapper',
     components:{

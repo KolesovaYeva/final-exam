@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 //Basic Fonts 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 ul{
     list-style: none;
 }
@@ -9,7 +17,8 @@ a{
 *{
     margin:0;
     padding:0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 body{
     font-family: "Roboto", sans-serif;
@@ -24,9 +33,15 @@ body{
     .logo_link{
         .group_logo{
             max-width:300px;
+            -webkit-transition:all 0.5s ease;
+            -o-transition:all 0.5s ease;
             transition:all 0.5s ease;
             &:hover{
-                transform: translateY(5px);
+                -webkit-transform: translateY(5px);
+                    -ms-transform: translateY(5px);
+                        transform: translateY(5px);
+                -webkit-transition:all 0.5s ease;
+                -o-transition:all 0.5s ease;
                 transition:all 0.5s ease;
             }
         }
