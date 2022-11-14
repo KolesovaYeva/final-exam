@@ -1,6 +1,6 @@
 <template>
     <div class="music_wrapper">
-        <!-- <sliderMusicWrapper 
+        <sliderMusicWrapper 
             :carousel_music_data="sliderItems">
             <sliderMusicItem
                 @click="showInfo = true">
@@ -13,7 +13,7 @@
                 :key="product.id"
                 v-bind:music_data="product"
             />
-           </transition> -->
+           </transition>
     </div>
 </template>
 

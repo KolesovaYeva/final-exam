@@ -3,24 +3,17 @@
         <sliderWrapper
             :carousel_data="sliderItems"
         />
-        <div class="shop_list container" >
-            <!-- <catalogItem/> -->
+        <div class="shop_list container">
             <catalogItem
-                v-for="product in PRODUCTS"
-                :key="product.name"
-                :product_data="product"
-            />
+                v-for="(products, index) in products" :key="index"/>
         </div>
     </div>
 </template>
 
 <script>
-
     import axios from 'axios';
-    import {mapActions, mapGetters} from 'vuex';
     import catalogItem from '@/components/Shop/shopItem.vue';
     import sliderWrapper from '@/components/Shop/Slider/sliderWrapper.vue';
-
     export default{
         name:'catalogWrapper',
         components:{
@@ -28,7 +21,6 @@
             sliderWrapper
         },
         props:{
-
         },
         data(){
             return{
@@ -37,23 +29,16 @@
                     {id: "newsTwo", img: 'SliderTwo.jpg'},
                     {id: "newsThree", img: 'SliderThree.jpg'}
                 ],
-                // products: []
+                products: []
             }
         },
         computed:{
-            ...mapGetters([
-                'PRODUCTS'
-            ])
         },
         methods:{
-            ...mapActions([
-                'GET_PRODUCTS_FROM_API'
-            ])
         },
         mounted(){
-            // axios('http://localhost:3000/products')
-            // .then(response => this.products = response.data)
-            this.GET_PRODUCTS_FROM_API()
+            axios('http://localhost:3000/products')
+            .then(response => this.products = response.data)
         }
     }
 </script>
