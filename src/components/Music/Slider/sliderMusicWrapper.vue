@@ -1,23 +1,30 @@
 <template>
     <div class="wrapper">
         <div class="slider_music_wrapper">
-            <sliderMusicItem
-                v-for="item in carousel_music_data"
+            <VueSlickCarousel v-bind="settings">
+                <sliderMusicItem
+                v-for="(item, index) in carousel_music_data"
                 :key="item.id"
                 :item_data="item"
+                :data-index="index"
             />
+            </VueSlickCarousel>
         </div>
     </div>
 </template>
 
 <script>
-    import '/public/slider.js';
+    import VueSlickCarousel from 'vue-slick-carousel'
+    import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+    import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
     import sliderMusicItem from '@/components/Music/Slider/sliderMusicItem.vue';
 
     export default{
         name:'sliderMusicWrapper',
         components:{
             sliderMusicItem,
+            VueSlickCarousel
         },
         props:{
             carousel_music_data:{
@@ -27,6 +34,46 @@
         },
         data(){
             return{
+                settings: {
+                    dots: false,
+                    infinite: true,
+                    // centerMode: true,
+                    // centerPadding: "20px",
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: true,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                dots: false,
+                                infinite: true,
+                                centerMode: true,
+                                centerPadding: "20px",
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                variableWidth: true,
+                            }
+                        },
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                dots: false,
+                                slidesToShow: 2,
+                                slidesToScroll: 2,
+                                initialSlide: 2
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                dots: false,
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                }
             }
         },
         computed:{
