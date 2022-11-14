@@ -5,16 +5,14 @@
         />
         <div class="shop_list container">
             <catalogItem
-                v-for="product in PRODUCTS"
-                :key="product.name"
-                :product_data="product"
-            />
+                v-for="(products, index) in products" :key="index"/>
         </div>
     </div>
 </template>
 
 <script>
-    import {mapActions, mapGetters} from 'vuex';
+
+    import axios from 'axios';
     import catalogItem from '@/components/Shop/shopItem.vue';
     import sliderWrapper from '@/components/Shop/Slider/sliderWrapper.vue';
 
@@ -33,21 +31,17 @@
                     {id: "newsOne", img: 'SliderOne.jpg'},
                     {id: "newsTwo", img: 'SliderTwo.jpg'},
                     {id: "newsThree", img: 'SliderThree.jpg'}
-                ]
+                ],
+                products: []
             }
         },
         computed:{
-            ...mapGetters([
-                'PRODUCTS'
-            ]),
         },
         methods:{
-            ...mapActions([
-                'GET_PRODUCTS_FROM_API'
-            ]),
         },
         mounted(){
-            this.GET_PRODUCTS_FROM_API()
+            axios('http://localhost:3000/products')
+            .then(response => this.products = response.data)
         }
     }
 </script>

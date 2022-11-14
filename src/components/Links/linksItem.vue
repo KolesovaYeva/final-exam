@@ -1,21 +1,30 @@
 <template>
-    <div class="link_item_wrapper ">
-        <a :href="link_data.link" class="links_link"><img class="links_item_image" :src="link_data.image" alt=""></a>
+    <div class="link_item_wrapper flex-row">
+       <div class="wrapper" v-for="(links, index) in links" :key="index">
+        <a :href="links.link" class="links_link">
+            <img class="links_item_image" :src="links.image" alt="">
+        </a>
+       </div>
     </div>
 </template>
 
 <script>
+
+    import axios from 'axios';
+
     export default{
         name:'linkItemWrapper',
         props:{
-            link_data:{
-                type:Object,
-                default(){
-                    return{
-
-                    }
-                }
+        },
+        data(){
+            return{
+                links: []
             }
+        },
+        mounted(){
+            axios
+                .get('http://localhost:3000/links')
+                .then(response => this.links = response.data)
         }
     }
 </script>

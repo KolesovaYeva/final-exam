@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .brian_may_wrapper, .roger_taylor_wrapper, .freddie_mercury_wrapper, .john_deacon_wrapper, .queen_wrapper{
     position:relative;
     padding-top: 0;
@@ -40,8 +47,12 @@
         margin-bottom: 30px;
     }
     .higher_wrapper{
-        align-items: flex-start;
-        justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         margin: 20px 0;
         .left_part{
         padding: 20px;
@@ -74,3 +85,75 @@
         line-height: 30px;
     }    
 }
+
+@media screen and (max-width: 769px){
+    .brian_may_wrapper, .roger_taylor_wrapper, .freddie_mercury_wrapper, .john_deacon_wrapper, .queen_wrapper {
+        .artist_name{
+            top: 30px;
+            right: 40px;
+            font-size: 2em;
+            line-height: 30px;
+        }
+        .text_wrapper{
+            font-size: 1.2em;
+        }
+        .container{
+            width:90%;
+            .higher_wrapper{
+                -webkit-box-orient:vertical;
+                -webkit-box-direction:normal;
+                    -ms-flex-direction:column;
+                        flex-direction:column;
+                .left_part{
+                    width:100%;
+                    margin-bottom:20px;
+                    padding: 20px 0 20px;
+                    table tr td{    
+                        font-size:1em;
+                        &:last-child {
+                        padding-left: 15px;
+                        font-size: 1.1em;
+                        font-weight: 600;
+                        }
+                    } 
+                }
+                .right_part{
+                    width:100%;
+                }
+            }
+        }
+
+    }
+}
+
+ @media screen and (max-width: 426px){
+    .brian_may_wrapper, .roger_taylor_wrapper, .freddie_mercury_wrapper, .john_deacon_wrapper, .queen_wrapper {
+        margin: 0px 0;
+        .hero_image{
+            margin-bottom: 10px;
+        }
+        .text_wrapper{
+            font-size: 1.1em;
+        }
+        .higher_wrapper{
+            margin: 0;
+            .left_part{
+                padding: 10px 0 10px ;
+                table tr td{
+                    font-size: 0.9em;
+                    &:last-child {
+                        padding-left: 15px;
+                        font-size: 1.1em;
+                        font-weight: 600;
+                        }
+                }
+            }
+        }
+        .artist_name{
+            top: 8px;
+            right: 26px;
+            font-size: 1.5em;
+            line-height: 21px;
+        }
+    }
+ }

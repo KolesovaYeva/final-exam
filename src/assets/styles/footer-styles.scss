@@ -5,13 +5,18 @@
   right: 0;
   width: 100%;
   background: #000;
-  padding: 1em 0 2em;
+  padding: 2em 0 2em;
     .container{
       width: 100%;
       justify-content: center;
       gap: 20px;
       .left_part{
         width: 25%;
+        .icon{
+          color:white;
+          margin-right:15px;
+          font-size:30px;
+        }
       }
       .central_part{
         width: 45%;
@@ -40,13 +45,37 @@
       }
     }
 }
+
+@media screen and (max-width:769px){
+  .footer_wrapper{
+
+    .flex-row{
+      flex-direction: column;
+      .left_part{
+        width:39%;
+        gap:20px;
+        padding-top:39px;
+      }
+      .central_part{
+        width:67%;
+        
+      }
+      .right_part{
+        width:25%;
+        display:none;
+      }
+    }
+  
+  }
+}
+
 @font-face {
     font-family: 'icomoon';
-    src:  url('C:\Users\User\Desktop\final-exam\src\assets\fonts\iconmoon\icomoon.eot');
-    src:  url('C:\Users\User\Desktop\final-exam\src\assets\fonts\iconmoon\icomoon.eot') format('embedded-opentype'),
-      url('C:\Users\User\Desktop\final-exam\src\assets\fonts\iconmoon\icomoon.ttf') format('truetype'),
-      url('C:\Users\User\Desktop\final-exam\src\assets\fonts\iconmoon\icomoon.woff') format('woff'),
-      url('C:\Users\User\Desktop\final-exam\src\assets\fonts\iconmoon\icomoon.svg') format('svg');
+    src:  url('/src/assets/fonts/iconmoon/icomoon.eot');
+    src:  url('/src/assets/fonts/iconmoon/icomoon.eot') format('embedded-opentype'),
+      url('/src/assets/fonts/iconmoon/icomoon.ttf') format('truetype'),
+      url('/src/assets/fonts/iconmoon/icomoon.woff') format('woff'),
+      url('/src/assets/fonts/iconmoon/icomoon.svg') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
