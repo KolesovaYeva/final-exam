@@ -11,7 +11,6 @@
         <div class="right_part">
             <p class="album_name">{{dataToShow.name}}</p>
             <p class="album_quote">{{dataToShow.quote}}</p>
-            <p class="album_info" v-for="(links, index) in links" :key="index">{{dataToShow.info}}</p>
             <p class="album_info">{{dataToShow.info[1]}}</p>
             <p class="album_info">{{dataToShow.info[2]}}</p>
             <p class="album_info">{{dataToShow.info[3]}}</p>
@@ -78,7 +77,7 @@ export default {
                 { id: "31", img: 'DEEP_CUTS_3.jpg' },
                 { id: "32", img: 'BOHEMIANRHAPSODY.jpg' }
             ],
-            allData: {},
+            allData: {}, 
             dataToShow: null
         }
     },
@@ -98,11 +97,9 @@ export default {
             el.addEventListener('click', this.showInfoHandler)
         });
 
-        axios('http://localhost:3000/music', {
-            method: "GET"
-        }).then(res => {
-            this.allData = res.data;
-        })
+        axios
+            .get('http://localhost:3000/music')
+            .then(response => this.allData = response.data)
     }
 }
 </script>

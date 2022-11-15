@@ -1,21 +1,28 @@
 <template>
     <div class="wrapper">
         <div class="slider_music_wrapper">
-            <VueSlickCarousel v-bind="settings">
+            <VueSlickCarousel
+                :dots="false"
+                :infinite= "true"
+                :centerMode="true"
+                :slidesToShow="4"
+                :slidesToScroll="4"
+                :variableWidth="true">
                 <sliderMusicItem
-                v-for="(item, index) in carousel_music_data"
-                :key="item.id"
-                :item_data="item"
-                :data-index="index"
-            />
+                        v-for="(item, index) in carousel_music_data"
+                        :key="item.id"
+                        :item_data="item"
+                        :data-index="index"
+                />
             </VueSlickCarousel>
         </div>
     </div>
 </template>
 
 <script>
+    
     import VueSlickCarousel from 'vue-slick-carousel'
-    import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+    // optional style for arrows & dots
     import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
     import sliderMusicItem from '@/components/Music/Slider/sliderMusicItem.vue';
@@ -39,8 +46,8 @@
                     infinite: true,
                     // centerMode: true,
                     // centerPadding: "20px",
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
                     variableWidth: true,
                     responsive: [
                         {

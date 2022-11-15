@@ -2,10 +2,10 @@
     <footer class="footer_wrapper">
         <div class="container flex-row">
             <div class="left_part">
-            <span class="icon-facebook icon"></span>
-            <span class="icon-instagram icon"></span>
-            <span class="icon-twitter icon"></span>
-            <span class="icon-youtube icon"></span>
+            <a href="https://www.facebook.com/Queen" class="socials_link"><span class="icon-facebook icon"></span></a>
+            <a href="https://www.instagram.com/officialqueenmusic/" class="socials_link"><span class="icon-instagram icon"></span></a>
+            <a href="https://twitter.com/queenwillrock" class="socials_link"><span class="icon-twitter icon"></span></a>
+            <a href="https://www.youtube.com/Queen" class="socials_link"><span class="icon-youtube icon"></span></a>
         </div>
         <div class="central_part">
             <a href="#" class="logo_link"><img class="group_logo" src="https://dvfnvgxhycwzf.cloudfront.net/media/BannerFrontendSegment-image/imageFull/.f13EhTQY/BannerFrontendSegment-image-10367.png?t=182d591d33dfa26351fd" alt=""></a>
