@@ -1,13 +1,7 @@
 <template>
     <div class="wrapper">
         <div class="slider_music_wrapper">
-            <VueSlickCarousel
-                :dots="false"
-                :infinite= "true"
-                :centerMode="true"
-                :slidesToShow="4"
-                :slidesToScroll="4"
-                :variableWidth="true">
+            <VueSlickCarousel v-bind="settings">
                 <sliderMusicItem
                         v-for="(item, index) in carousel_music_data"
                         :key="item.id"

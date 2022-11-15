@@ -45,5 +45,5 @@
     } 
 </script>
 
-<style lang="scss" src="@/assets/styles/slider-item-styles.scss">
+<style lang="scss">
 </style>
