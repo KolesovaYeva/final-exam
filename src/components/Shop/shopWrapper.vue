@@ -1,6 +1,8 @@
 <template>
     <div class="catalog_wrapper">
         <sliderWrapper
+        :dots="false"
+        :arrows="false"
             :carousel_data="sliderItems"
         />
         <div class="shop_list container" >

@@ -1,7 +1,14 @@
 <template>
     <div class="wrapper">
         <div class="slider_music_wrapper">
-            <VueSlickCarousel v-bind="settings">
+            <VueSlickCarousel
+                :dots="false"
+                :arrows="false"
+                :infinite= "true"
+                :centerMode="true"
+                :slidesToShow="4"
+                :slidesToScroll="4"
+                :variableWidth="true">
                 <sliderMusicItem
                         v-for="(item, index) in carousel_music_data"
                         :key="item.id"
@@ -18,9 +25,7 @@
     import VueSlickCarousel from 'vue-slick-carousel'
     // optional style for arrows & dots
     import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-
     import sliderMusicItem from '@/components/Music/Slider/sliderMusicItem.vue';
-
     export default{
         name:'sliderMusicWrapper',
         components:{
@@ -78,7 +83,6 @@
             }
         },
         computed:{
-
         },
         methods:{
         },

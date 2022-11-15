@@ -31,7 +31,6 @@
 import axios from 'axios';
 import sliderMusicItem from '@/components/Music/Slider/sliderMusicItem.vue'
 import sliderMusicWrapper from '@/components/Music/Slider/sliderMusicWrapper.vue';
-
 export default {
     name: 'musicWrapper',
     components: {
@@ -39,7 +38,6 @@ export default {
         sliderMusicItem
     },
     props: {
-
     },
     data() {
         return {
@@ -86,7 +84,6 @@ export default {
     methods: {
         showInfoHandler(e) {
             const dataIndex = e.target.closest('.slider_item_wrapper').getAttribute('data-index');
-
             if(dataIndex >= 0) {
                 this.dataToShow = this.allData[dataIndex];
             }
@@ -96,7 +93,6 @@ export default {
         document.getElementsByClassName('slick-slide').forEach(el => {
             el.addEventListener('click', this.showInfoHandler)
         });
-
         axios
             .get('http://localhost:3000/music')
             .then(response => this.allData = response.data)
@@ -105,5 +101,4 @@ export default {
 </script>
 
 <style lang="scss" src="@/assets/styles/music-wrapper-styles.scss">
-
 </style>

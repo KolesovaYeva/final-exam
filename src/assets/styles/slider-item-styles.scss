@@ -42,6 +42,7 @@
 button{
     .slick-arrow{
         .slick-prev{
+            display:none;
             position: absolute;
             transform:rotate(180deg);
             z-index: 1;
@@ -56,6 +57,7 @@ button{
     div.catalog_wrapper{
         div.wrapper{
             button.slick-arrow.slick-prev{
+                display:none;
                 position: absolute;
                 transform:rotate(180deg);
                 z-index: 1;
