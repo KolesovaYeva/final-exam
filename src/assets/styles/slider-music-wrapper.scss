@@ -1,70 +1,79 @@
+.slick-list{
+	min-width: 80%;
+    display: inline-block;
+    /* max-width: 205%; */
+    width: 1000px;
+    margin: 60px auto 60px;
+    transform: translateX(-270px);
+}
 .slider_music_wrapper{
-    display: block;
-    margin: 0 auto;
-    align-items: center;
-    position: relative;
+    // display: block;
+    // margin: 0 auto;
+    // align-items: center;
+    // position: relative;
+    padding:80px;
     background-image: url('/src/assets//images/music/MUSIC_BACKGROUND.jpg');
     margin-bottom: 80px;
 }
-    .slider_music_image {
-        display: block;
-        margin: 64px 0 59px 50px;
-        // width: 100%;
-    }
-    .slick-dots{
-        list-style:none;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding: 0;
-        gap:12px;
-        button{
-            font-size: 0;
-            display: inline-block;
-            width:12px;
-            height:12px;
-            border-radius: 50%;
-            padding: 0;
-            cursor:pointer;
-            border: 0;
-            outline: 0;
-            background: #CAC2BA;
-        }
-        .slick-active button{
-            background: #5096f1;
-        }
-    }
+//     .slider_music_image {
+//         display: block;
+//         margin: 64px 0 59px 50px;
+//         // width: 100%;
+//     }
+//     .slick-dots{
+//         list-style:none;
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: center;
+//         padding: 0;
+//         gap:12px;
+//         button{
+//             font-size: 0;
+//             display: inline-block;
+//             width:12px;
+//             height:12px;
+//             border-radius: 50%;
+//             padding: 0;
+//             cursor:pointer;
+//             border: 0;
+//             outline: 0;
+//             background: #CAC2BA;
+//         }
+//         .slick-active button{
+//             background: #5096f1;
+//         }
+//     }
     
-    .slick-dots .slick-active button {
-        background: #e3001b;
-    } 
-    .slick-list{
-        // .slick-track{
-        //     width:100%;
-        //     .slider_music_image{
-        //         width:100%;
-        //     }
-        // }
-    }
-    .slick-prev{
-        position: absolute;
-        transform:rotate(180deg);
-	    z-index: 1;
-	    left: 1%;
-	    top: 40%;
-        background:none;
-        border:none;
-    }
-    .slick-next{
-        position: absolute;
-        top: 42%;
-        right: 0.5%;
-        z-index: 1;
-        background:none;
-        border:none;
-    }
-    .slick-slider, .slick-track{
-        margin-bottom: 20px;
-        width: auto;
-    }
+//     .slick-dots .slick-active button {
+//         background: #e3001b;
+//     } 
+//     .slick-list{
+//         // .slick-track{
+//         //     width:100%;
+//         //     .slider_music_image{
+//         //         width:100%;
+//         //     }
+//         // }
+//     }
+//     .slick-prev{
+//         position: absolute;
+//         transform:rotate(180deg);
+// 	    z-index: 1;
+// 	    left: 1%;
+// 	    top: 40%;
+//         background:none;
+//         border:none;
+//     }
+//     .slick-next{
+//         position: absolute;
+//         top: 42%;
+//         right: 0.5%;
+//         z-index: 1;
+//         background:none;
+//         border:none;
+//     }
+//     .slick-slider, .slick-track{
+//         margin-bottom: 20px;
+//         width: auto;
+//     }
 

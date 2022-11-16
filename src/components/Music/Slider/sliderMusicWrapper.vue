@@ -1,14 +1,7 @@
 <template>
     <div class="wrapper">
         <div class="slider_music_wrapper">
-            <VueSlickCarousel
-                :dots="false"
-                :arrows="false"
-                :infinite= "true"
-                :centerMode="true"
-                :slidesToShow="4"
-                :slidesToScroll="4"
-                :variableWidth="true">
+            <VueSlickCarousel  :slidesToScroll= 4 :slidesToShow= 4 :dots="false" :arrows="false" :infinite= "true" :autoplay="true" :autoplaySpeed="1500">
                 <sliderMusicItem
                         v-for="(item, index) in carousel_music_data"
                         :key="item.id"
@@ -91,5 +84,5 @@
     } 
 </script>
 
-<style lang="scss" src="@/assets/styles/slider-music-wrapper.scss">
+<style lang="scss" scoped src="@/assets/styles/slider-music-wrapper.scss">
 </style>

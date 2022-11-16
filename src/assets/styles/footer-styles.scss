@@ -1,16 +1,18 @@
 .footer_wrapper{
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     .container{
       width: 100%;
       justify-content: center;
       gap: 20px;
+      text-align: center;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color:black;
+      width: 100%;
+      justify-content: center;
+      gap: 20px;
+      padding-bottom: 30px;
       .left_part{
         width: 25%;
         .icon{
@@ -20,9 +22,11 @@
         }
       }
       .central_part{
+        padding:20px;
         width: 45%;
         .logo_link{
           max-width:100px;
+          margin-bottom:10px;
           .group_logo{    
             max-width: 116px;
             margin: 0 auto;
@@ -36,9 +40,10 @@
       }
       .right_part{
         width: 25%;
+        padding-bottom:10px;
         .form_link{
           text-decoration: none;
-        color: white;
+          color: white;
     }
       }
       .icon{
